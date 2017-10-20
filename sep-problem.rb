@@ -1,5 +1,3 @@
-require 'pry'
-
 ALPHABET = Array('A'..'Z')
 
 class Diamond
@@ -10,7 +8,7 @@ class Diamond
       exit
     end
     if letter == 'A'
-      puts letter
+      diamond = letter
     else
       letters = Array('A'..letter) + Array('A'...letter).reverse
       reverse = Array('A'..letter).reverse
@@ -19,8 +17,8 @@ class Diamond
         leading_spaces = ' ' * place
         leading_spaces + LetterRow.new(l).to_s
       end.join("\n")
-      puts diamond
     end
+    diamond
   end
 end
 
@@ -45,8 +43,6 @@ class LetterRow
     end
   end
 end
-
-Diamond.print(ARGV[0])
 
 
 # 0  ....A....
