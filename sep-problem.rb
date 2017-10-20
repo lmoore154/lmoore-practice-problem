@@ -4,8 +4,7 @@ class Diamond
 
   def self.print(letter)
     unless ALPHABET.include? letter
-      puts 'That is not a valid input, please try again.'
-      exit
+      return 'That is not a valid input, please try again.'
     end
     if letter == 'A'
       diamond = letter
