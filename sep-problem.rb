@@ -3,8 +3,12 @@ require 'pry'
 ALPHABET = Array('A'..'Z')
 
 class Diamond
+
   def self.print(letter)
-    letter.upcase
+    unless ALPHABET.include? letter
+      puts 'That is not a valid input, please try again.'
+      exit
+    end
     if letter == 'A'
       puts letter
     else
@@ -19,7 +23,6 @@ class Diamond
     end
   end
 end
-
 
 class LetterRow
   attr_reader :letter
