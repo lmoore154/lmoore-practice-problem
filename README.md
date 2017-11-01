@@ -1,4 +1,4 @@
-## SEP programming problem
+## Practice programming problem
 
 #### To run the program:
 
